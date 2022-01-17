@@ -8,10 +8,9 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag :modernizr %>
-    
 
     <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ3O3gsQcVWMrCnlGjTdmMCjSeX3NiZaI&callback=initMap&libraries=&v=weekly&channel=2"
+      src="<%=@url_maps%>"
     async
   ></script>
     
