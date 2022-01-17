@@ -1,0 +1,17 @@
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ3O3gsQcVWMrCnlGjTdmMCjSeX3NiZaI&callback=initMap&libraries=&v=weekly&channel=2"
+    async
+  ></script>
+
+  <%= semantic_form_for [:admin, @marker], builder: ActiveAdmin::FormBuilder do |f| %>
+    <div id="contact-map" style="width:100%;height:300px"></div>
+    <%= f.inputs "Studio" do %>
+         <%= f.input :name %>
+         <%= f.input :description %>
+         <%= f.input :lat  %>
+         <%= f.input :lng  %>
+         <%= f.input :image, :label => "Image - (must be 335x221px)"  %>
+    <% end %>
+    <%= f.actions  %>
+<% end %>
+
